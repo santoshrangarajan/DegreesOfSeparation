@@ -15,10 +15,7 @@ public class Node {
   private NodeColor color = NodeColor.WHITE;
   private int lastNodeReachedFrom = 0; 
   
-/*
-   * Sample input for use - Bacon,Kevin
-   * 9145 65828,63036,59586,57750,51037,49425,48907,47706,39955,17203,10232,9138:0:GRAY:0
-   */
+
   public Node(String str) {
 
     String[] map = str.split("\\s+");

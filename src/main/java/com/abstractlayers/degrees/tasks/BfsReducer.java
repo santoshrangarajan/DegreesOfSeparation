@@ -16,8 +16,7 @@ import com.abstractlayers.degrees.ds.Node;
 import com.abstractlayers.degrees.ds.NodeColor;
 
 
-/*  Based of following
- * 
+/*  Based of johnandcallin.com blog
  *  Below are major changes
  *  1. updating lastNodeReachedFrom
  * */
