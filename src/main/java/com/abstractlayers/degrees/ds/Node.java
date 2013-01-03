@@ -5,10 +5,10 @@ import java.util.*;
 
 import org.apache.hadoop.io.Text;
 
-
+/*  Based of johnandcallin.com blog
+*/
 public class Node {
 
-  
   private final int id;
   private int distance;
   private List<Integer> edges = new ArrayList<Integer>();
