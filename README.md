@@ -1,11 +1,11 @@
-DegreesOfSeperation
+DegreesOfSeparation
 ===================
 
-Application to compute Degrees Of Seperation using Spring-Batch and Spring-Hadoop
+Application to compute Degrees Of Separation using Spring-Batch and Spring-Hadoop
 
 Usage
 ========
-1. Please refer <a href="http://abstractlayers.com/2013/01/03/degrees-of-seperation-using-spring/">here</a> on overview about application
+1. Please refer <a href="http://abstractlayers.com/2013/01/03/degrees-of-separation-using-spring/">here</a> on overview about application
 
 License
 ========
