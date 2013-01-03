@@ -47,7 +47,7 @@ public class SymbolGraph {
     	initAdjList();
     }
     
-    public void populateSymbolTable(String line){
+    private void populateSymbolTable(String line){
     	log.info("Populating symbolTable...");
     	 String[] tokens = line.split(delimiter);
          for (int i = 0; i < tokens.length; i++) {
@@ -55,7 +55,7 @@ public class SymbolGraph {
              	symbolTable.put(tokens[i], symbolTable.size());
          }
     }
-    public void populateSymbolTable(List<String> lines){
+    private void populateSymbolTable(List<String> lines){
     	
     	for(String line:lines){
     		 String[] tokens = line.split(delimiter);
@@ -66,7 +66,7 @@ public class SymbolGraph {
     	}
     }
     
-   public void initAdjList(){
+   private void initAdjList(){
     	adjList = new TreeMap<Integer,List<Integer>>();
     	 for (int i = 0; i < symbolTable.size(); i++) {
     		 adjList.put(i,new ArrayList<Integer>());
@@ -80,7 +80,7 @@ public class SymbolGraph {
 	        }
     }
     
-    public void populateAdjList(List<String> lines){
+    private void populateAdjList(List<String> lines){
     	for(String line:lines){ 
 	        	//System.out.println("second loop- count"+count);
 	            String[] tokens = line.split(delimiter);

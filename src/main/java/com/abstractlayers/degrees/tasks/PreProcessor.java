@@ -11,42 +11,6 @@ import com.abstractlayers.degrees.ds.SymbolGraphBfs;
 import com.abstractlayers.degrees.utils.FileUtils;
 
 
-/*
- * Algorithm
- * 1. 
- * 2. Read file and Create symbolGraph
- * 3. Iterate through G objectof SymbolGraphs and write to file
-          For specific source -
- *         set distance -0
- *         color as gray
- *      everything else
- *          distance = infinty
- *          color = white
- *   
- * 4. Run spring batch 
- *      a. copy the file using groovy script to hadoop
- *      b. Run Maps and Reducers for decided number of iterations
- *      c. In addition vertex and edges outputfile should contain below additional parameters
- *         a. is processed - by color  - available
- *         b. distance to -            - available
- *         c. marked                   - not available. Not needed. can use color?
- *         d. edgeto                   - not available.
- *             -1 for initialization
- *              0 for source
- *              and nodeId for any other node from which this node is reacheable
- *              
- *      d. groovy script to copy generated output 
- *              
- * DegreesOfSepereration   
- * 1. Parse final Output. Create G Object
- *      Parse vertex- , distanceto , edgeTo, marked, 
- *      
- * 2. when query say some person xyz
- *    calculare reverse index from ST
- *    query the G object for distance
- * 
- * 
- * */
 public class PreProcessor implements Tasklet {
 	
 	//private String originalFile ;

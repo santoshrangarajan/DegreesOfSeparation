@@ -45,22 +45,7 @@ public class SymbolGraphBfs extends SymbolGraph {
     	initNodeMapBeforeBfs(sourceName);
     	this.connectionsSet = false;
     }
-    
-    /* 
-     *   Constructor invoked if out-put file is available
-     *   
-     * */
-    
-   /* public SymbolGraphBfs(String fileName, String delimiter,String sourceName, String hadoopOutputFile){
-    	super(fileName,delimiter);
-    	nodeMapBeforeBfs = new TreeMap<Integer,Node>();
-    	nodeMapAfterBfs = new TreeMap<Integer,Node>();
-    	initNodeMapBeforeBfs(sourceName);
-    	initNodeMapAfterBfs(hadoopOutputFile);
-    }*/
-    
-    
-    
+     
     
     ///// key  Node
     //// Node -  edges : distance : color : lastNodeReachedFrom
@@ -75,26 +60,8 @@ public class SymbolGraphBfs extends SymbolGraph {
     		int key = adjKeysIterator.next();
     		content.append(key);
     		content.append(" ");
-    		/*List<Integer> list = adjList.get(key);
-    		String delim="";
-    		for(int i : list){
-    			content.append(delim).append(i);
-	    		delim =",";
-    		}*/
     		content.append(appendEdges(key));
     		content.append(appendBfsAttributes(key,source));
-	    	/*if(key == source){
-		    	   distance = 0;
-		    	   color = NodeColor.GRAY;
-		    	   lastNodeReachedFrom = source;
-		    	  // edgeTo=0;
-		   } else {
-		    		distance = Integer.MAX_VALUE;
-		    		color = NodeColor.WHITE;
-		    		lastNodeReachedFrom = -1;
-		    		//edgeTo=-1;
-		   }
-		   content.append(":").append(distance).append(":").append(color).append(":").append(lastNodeReachedFrom).append(":");*/
 		   nodeMapBeforeBfs.put(key, new Node(content.toString()));
 		   content.delete(0, content.length());
     	}

@@ -63,14 +63,6 @@ private static final Log log = LogFactory.getLog(LocalToHadoop.class);
 
 	public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 		log.info("Copying hadoop file to local filesystem");
-		//Configuration conf = new Configuration();
-	   // conf.addResource(new Path("/Users/santoshrangarajan/Softwares/OpenSource/Hadoop/hadoop-1.0.4/conf/core-site.xml"));
-        //conf.addResource(new Path("/Users/santoshrangarajan/Softwares/OpenSource/Hadoop/hadoop-1.0.4/conf/hdfs-site.xml"));
-		//confCoreSite
-		//hadoopConf.addResource(new Path(confCoreSite));
-		//hadoopConf.addResource(new Path(confHdfsSite));
-       // FileSystem fileSystem = FileSystem.get(conf);
-		//hadoopFileSystem  = FileSystem.get(hadoopConf);
 		 hadoopConf.addResource(new Path(confCoreSite));
 	     hadoopConf.addResource(new Path(confHdfsSite));
 	        
