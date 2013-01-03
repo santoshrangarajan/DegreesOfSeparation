@@ -91,6 +91,7 @@
      
      <beans:bean id="degreesOfSeperation" class="com.abstractlayers.degrees.tasks.DegreesOfSeperationClient">
         <beans:property name="symbolGraphBfs" ref="symbolGraphBfs"/>
+        <beans:property name="destination" value="${sample.destination.name}"/>
      </beans:bean>
   
      

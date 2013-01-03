@@ -20,10 +20,15 @@ public class DegreesOfSeperationClient implements Tasklet {
 	
 	
 	 private SymbolGraphBfs symbolGraphBfs;
+	 private String destination;
 	 private static final Log log = LogFactory.getLog(DegreesOfSeperationClient.class);
 
 	 public void setSymbolGraphBfs(SymbolGraphBfs symbolGraph) {
 			this.symbolGraphBfs = symbolGraph;
+	 }
+	
+	 public void setDestination(String destination){
+		    this.destination = destination;
 	 }
 	 
 	 public RepeatStatus execute(StepContribution contribution,ChunkContext chunkContext) throws Exception {
@@ -34,8 +39,9 @@ public class DegreesOfSeperationClient implements Tasklet {
 			log.info("First degree connections :"+symbolGraphBfs.getConnectionsCount(1));
 			log.info("Second degree connections :"+symbolGraphBfs.getConnectionsCount(2));
 			log.info("Third degree connections :"+symbolGraphBfs.getConnectionsCount(3));
-			log.info("Below is degree of seperation between "+symbolGraphBfs.getSourceName()+" and Smith, Isaac");
-			List<String> connections = symbolGraphBfs.getConnectionDetails("Smith, Isaac");
+			log.info("Distance between "+symbolGraphBfs.getSourceName()+" and "+ destination +":"+symbolGraphBfs.getConnectionDistance("Smith, Isaac"));
+			log.info("Below is degree of seperation between "+symbolGraphBfs.getSourceName()+" and "+destination);
+			List<String> connections = symbolGraphBfs.getConnectionDetails(destination);
 			Iterator <String> connectionsIterator = connections.iterator();
 			while(connectionsIterator.hasNext()){
 				log.info(connectionsIterator.next());

@@ -207,6 +207,10 @@ public class SymbolGraphBfs extends SymbolGraph {
     }
     
     
+    public int getConnectionDistance(String name){
+	   Node node = nodeConnectionsMap.get(index(name));
+	   return node.getDistance();
+	}
     public List<String> getConnectionDetails(String name){
     	List<String> connections = new ArrayList<String>();
     	int vertex = index(name);
