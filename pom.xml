@@ -4,8 +4,8 @@
 	                    http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.abstractlayers</groupId>
-	<artifactId>spring-degrees-of-seperation</artifactId>
-	<name>SpringDegreesOfSeperation</name>
+	<artifactId>spring-degrees-of-separation</artifactId>
+	<name>SpringDegreesOfSeparation</name>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
 	<properties>
@@ -202,7 +202,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.abstractlayers.degrees.DegreesOfSeperation</mainClass>
+                            <mainClass>com.abstractlayers.degrees.DegreesOfSeparation</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

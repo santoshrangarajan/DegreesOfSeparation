@@ -13,6 +13,6 @@
 	<import resource="classpath:/META-INF/spring/batch-common-context.xml" />
 	<!--  import resource="classpath:/META-INF/spring/hadoop-context.xml" / -->
 	<!--  import resource="classpath:/META-INF/spring/bfs-context.xml" / -->
-	<import resource="classpath:/META-INF/spring/degrees-of-seperation.xml" />
+	<import resource="classpath:/META-INF/spring/degrees-of-separation.xml" />
 
 </beans>
