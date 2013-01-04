@@ -32,7 +32,7 @@
             <batch:tasklet ref="localToHadoop"/>
         </batch:step>
         
-        
+       
         <batch:step id="bfs" next="iterateDecision">
                 <batch:tasklet ref="bfsTask">
                     	<batch:listeners>
