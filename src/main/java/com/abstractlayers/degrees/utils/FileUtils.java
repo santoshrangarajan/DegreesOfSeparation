@@ -54,33 +54,7 @@ public class FileUtils {
 		  
 		  FileWriter fw = new FileWriter(file.getAbsoluteFile());
 		  BufferedWriter bw = new BufferedWriter(fw);
-		  bw.write(content.toString());
+		  bw.write(content);
 		  bw.close();
-	}
-	
-	
-	public Map<Integer,Node > parseHadoopOutputFile(String fileName){
-		BufferedReader br = null;
-		Map<Integer,Node> nodeMap = new HashMap<Integer,Node>();
-		try {
-			String sCurrentLine;
-			br = new BufferedReader(new FileReader(fileName));
-			while ((sCurrentLine = br.readLine()) != null) {
-				Node node = new Node(sCurrentLine);
-				///// Only add nodes which are reachable.
-				if(node.getDistance()!=Integer.MAX_VALUE) {
-				    nodeMap.put(node.getId(),node);
-				}
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (br != null)br.close();
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		}
-		return nodeMap;
 	}
 }
